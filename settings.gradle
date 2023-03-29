@@ -1,0 +1,10 @@
+rootProject.name = 'bank'
+include 'infrastructure'
+include 'aplication-config'
+include 'domain'
+include 'aplicacion-service'
+include 'infrastructure:controller'
+findProject(':infrastructure:controller')?.name = 'controller'
+include 'infrastructure:repository'
+findProject(':infrastructure:repository')?.name = 'repository'
+
