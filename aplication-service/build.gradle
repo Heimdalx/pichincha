@@ -12,7 +12,3 @@ repositories {
 dependencies {
     implementation project(':domain')
 }
-
-test {
-    useJUnitPlatform()
-}
