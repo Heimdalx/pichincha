@@ -17,7 +17,17 @@ public class ClienteConverter implements ClienteConverterInterface {
 
     @Override
     public ClienteDTO toDTO(Cliente cliente) {
-        return mapper.map(cliente, ClienteDTO.class);
+        return ClienteDTO.builder()
+                .id(cliente.getId())
+                .nombre(cliente.getNombre())
+                .genero(cliente.getGenero())
+                .edad(cliente.getEdad())
+                .identificacion(cliente.getIdentificacion())
+                .direccion(cliente.getDireccion())
+                .telefono(cliente.getTelefono())
+                .contrasena(cliente.getContrasena())
+                .estado(cliente.isEstado())
+                .build();
     }
 
     @Override
