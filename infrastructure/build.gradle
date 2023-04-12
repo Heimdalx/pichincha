@@ -8,8 +8,13 @@ group = 'com.pichincha'
 repositories {
     mavenCentral()
 }
+springBoot {
+    mainClass = 'com.pichincha.Main'
+}
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web:2.7.10'
+
+
 }
 

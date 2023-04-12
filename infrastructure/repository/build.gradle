@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'io.freefair.lombok' version '6.3.0'
 }
 
 group = 'org.example'
@@ -9,9 +10,20 @@ repositories {
     mavenCentral()
 }
 
+springBoot {
+    mainClass = 'com.pichincha.Main'
+}
 dependencies {
+    implementation 'org.projectlombok:lombok:1.18.26'
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.6.2'
+    implementation project(':aplication-service')
+    implementation project(':domain')
+    implementation 'org.modelmapper:modelmapper:2.4.4'
+    implementation 'javax.xml.bind:jaxb-api:2.3.1'
+
+
 }
 
 test {

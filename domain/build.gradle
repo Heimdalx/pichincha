@@ -1,9 +1,15 @@
 plugins {
     id 'java'
+    id 'io.freefair.lombok' version '6.3.0'
 }
 
 group = 'com.pichincha'
 version = '1.0-SNAPSHOT'
 
+repositories {
+    mavenCentral()
+}
+
 dependencies {
+    implementation 'org.projectlombok:lombok:1.18.26'
 }

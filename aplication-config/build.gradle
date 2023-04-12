@@ -10,6 +10,7 @@ repositories {
 }
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web:2.7.10'
+    implementation 'com.microsoft.sqlserver:mssql-jdbc:9.4.0.jre11'
     implementation project(':infrastructure:controller')
     implementation project(':infrastructure:repository')
 }
